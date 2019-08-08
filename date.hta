@@ -1,0 +1,74 @@
+<title>date</title>
+
+<div align="center">
+  <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
+    <span id="view_year">yy</span>/<span id="view_month">m</span>/ (<span id="view_day">d</span>)
+  </p>
+
+  <p style="line-height: 0.8; margin: 0; border: 1px solid white;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+      <span id="view_date">d</span>
+    </span>
+    </span>
+    </span>
+    </span>
+    </span>
+    </span>
+  </p>
+
+  <p style="line-height:   0; margin: 0; border: 1px solid white;">
+    <span id="view_hour">hh</span>:<span id="view_minutes">mm</span>:<span id="view_seconds">ss</span>
+  </p>  
+</div>
+
+<!--
+<p align="center">
+  <span style="line-height: 1.5; border: 1px solid white;">
+    <span id="view_year">yy</span>/<span id="view_month">m</span>/ (<span id="view_day">d</span>)<br />
+  </span>
+
+  <span style="line-height: 0.8; border: 1px solid white;">
+    <span id="view_date" style="font-size: 7em;">d</span>
+    <br />
+  </span>
+
+  <span style="line-height:   0; border: 1px solid white;">
+    <span id="view_hour">hh</span>:<span id="view_minutes">mm</span>:<span id="view_seconds">ss</span>
+  </span>
+</p>  
+ -->
+
+<hta:application
+  id="date_calender"
+  maximizeButton="no"
+  minimizeButton="no"
+  scroll="no"
+ />
+
+<script type="text/javascript">
+  args = date_calender.commandLine.split(',');
+
+  resizeTo( args[1]||240, args[2]||270 );
+  moveTo( screen.width -(args[3]||210), -(args[4]||60) );
+
+  var week = new Array('ì˙','åé','âŒ','êÖ','ñÿ','ã‡','ìy','ì˙');
+
+  function view_date() {
+    var now = new Date();
+    document.getElementById('view_date')   .innerHTML =      now.getDate();
+    document.getElementById('view_year')   .innerHTML =  (''+now.getFullYear()).slice(-2);
+    document.getElementById('view_month')  .innerHTML =      now.getMonth()+1;
+    document.getElementById('view_day')    .innerHTML = week[now.getDay()];
+    document.getElementById('view_hour')   .innerHTML = ('0'+now.getHours())   .slice(-2);
+    document.getElementById('view_minutes').innerHTML = ('0'+now.getMinutes()) .slice(-2);
+    document.getElementById('view_seconds').innerHTML = ('0'+now.getSeconds()) .slice(-2);
+  }
+
+  view_date();
+  setInterval('view_date()',2593);
+</script>
