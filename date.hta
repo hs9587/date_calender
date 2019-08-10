@@ -1,4 +1,12 @@
 <title>date</title>
+<hta:application
+  id="date_calender"
+  maximizeButton="no"
+  minimizeButton="no"
+  scroll="no"
+ />
+
+<body style="padding-top: 0; margin-top: 0;">
 
 <div align="center">
   <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
@@ -43,18 +51,11 @@
 </p>  
  -->
 
-<hta:application
-  id="date_calender"
-  maximizeButton="no"
-  minimizeButton="no"
-  scroll="no"
- />
-
 <script type="text/javascript">
   args = date_calender.commandLine.split(',');
 
-  resizeTo( args[1]||240, args[2]||270 );
-  moveTo( screen.width -(args[3]||210), -(args[4]||60) );
+  resizeTo( args[1]||240, args[2]||250 );
+  moveTo( screen.width -(args[3]||210), -(args[4]||50) );
 
   var week = new Array('“ú','Œ','‰Î','…','–Ø','‹à','“y','“ú');
 
@@ -72,3 +73,5 @@
   view_date();
   setInterval('view_date()',2593);
 </script>
+
+</body>
