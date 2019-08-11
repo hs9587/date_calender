@@ -26,6 +26,6 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 なら HTA (HTML Applications) でいいや、Windows だし。
 
 ## 3秒置き
-```
-ruby -r prime -e 'ARGV.first.to_i.prime?.+("\n").display'
+```ruby
+ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 ```
