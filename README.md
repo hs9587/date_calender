@@ -33,9 +33,13 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 取り敢えず Ruby で GUI を探したんだけど、2.後半の頃(2019)だと手軽そうなの思いつかなった。
 なら HTA (HTML Applications) でいいや、Windows だし。
 
+## スタイルの数字
+
+## 引数のカンマ区切り
+
 ## 日付だけじゃなくて
 
 ### 3秒置き
-```ruby
+```
 ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 ```
