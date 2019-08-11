@@ -33,15 +33,6 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 取り敢えず Ruby で GUI を探したんだけど、2.後半の頃(2019)だと手軽そうなの思いつかなった。
 なら HTA (HTML Applications) でいいや、Windows だし。
 
-## スタイルの数字
-
-## 引数のカンマ区切り
-```javascript
-  args = date_calender.commandLine.split(',');
-```
-https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L55
-
-
 ## 日付だけじゃなくて
 日付数字を大きく出すのはいいのだけど、あと曜日は出したい、それは普通の字の大きさでいいや。
 その大きさで別の行なら月の数字も出せそう。
@@ -61,3 +52,11 @@ https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094
 ```
 ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 ```
+## 引数のカンマ区切り
+```javascript
+  args = date_calender.commandLine.split(',');
+```
+https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L55
+
+## スタイルの数字
+
