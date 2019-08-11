@@ -57,10 +57,19 @@ https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094
 ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 ```
 ## 引数のカンマ区切り
+https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L55
 ```javascript
   args = date_calender.commandLine.split(',');
 ```
-https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L55
+コマンドライン引数のことなので、はじめ空白区切りを取ってくればいいかと思っていて  
+幾つかの Windows環境に置いてるだけど、置き場所のパス名に空白文字が混じってたりなかったりする、
+「My ＜なんとか＞」「＜なんとか＞ and ＜なんとか＞」とか。
+そのときは二重引用符で囲ってあるからなんとかパース出来そうな気もするけど、、
+空白文字入ってないときは引用符かこってないのも考慮するとなるとちょっと大変。  
+なにかライブラリ入れる程大事にはしたくないかな、
+ライブラリ入れたら後述で工夫した数字のフォーマットにも便利かな、
+ちょっと迷います。
+
 
 ## スタイルの数字
 
