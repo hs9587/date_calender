@@ -48,12 +48,12 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 一桁の数字が連なっても分かるようにコロン「:」で区切る、その幅もあるよね。
 
 ### 3秒置き
-https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L74
+[date.hta#L74](https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L74)
 ```javascript
   setInterval('view_date()',2593);
 ```
 ええと `2593` は素数です。
-```
+```ruby
 ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 ```
 ## 引数のカンマ区切り
