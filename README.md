@@ -61,9 +61,6 @@ ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 ```javascript
   args = date_calender.commandLine.split(',');
 ```
-[date.hta#L55](https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L55)
-
-
 コマンドライン引数のことなので、はじめ空白区切りを取ってくればいいかと思っていて  
 幾つかの Windows環境に置いてるだけど、置き場所のパス名に空白文字が混じってたりなかったりする、
 「My ＜なんとか＞」「＜なんとか＞ and ＜なんとか＞」とか。
