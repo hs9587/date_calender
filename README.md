@@ -77,5 +77,19 @@ ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 まあカンマ「,」区切りで、
 上記の様に自身のファイルパスとも分別しないといけないので引数先頭にも区切り文字を置くことにする。
 
+### 引数既定値
+[date.hta#L57](https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L57)
+```javascript
+resizeTo( args[1]||240, args[2]||250 ); 
+moveTo( screen.width -(args[3]||210), -(args[4]||50) ); 
+```
+引数先頭にも区切り文字ということで、`args[1]`が引数の数値文字列の最初。  
+`||`で続けてるのが既定値、引数の文字列がないと論理和をとってその既定値が採用される。
+値は手元で良い様なやつ。  
+そして`args[2]`云々と続く。  
+
+`resizeTo()`で実行ウィンドウの大きさ、幅と高さを設定し、  
+`moveTo()`でその左上座標を横位置縦位置に設定する、こちらは負号付けて逆向きに数えてる。
+
 ## スタイルの数字
 
