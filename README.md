@@ -45,7 +45,7 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 一桁の数字が連なっても分かるようにコロン「:」で区切る、その幅もあるよね。
 
 ### 3秒置き
-[date.hta#L74](https://github.com/hs9587/date_calender/blob/f50d41169868830befceaf2ea815fa091896a134/date.hta#L74)
+[date.hta#L74](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L74)
 ```javascript
   setInterval('view_date()',2593);
 ```
