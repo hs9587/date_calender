@@ -101,7 +101,8 @@ moveTo( screen.width -(args[3]||210), -(args[4]||50) );
   maximizeButton="no"
   minimizeButton="no"
   scroll="no"
- />```
+ />
+```
 それに続く設定で実行ウィンドウのふち飾りをシンプルに。
 
 ## スタイルの数字
