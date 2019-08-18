@@ -54,7 +54,7 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 ```
 ## 引数のカンマ区切り
-[date.hta#L55](https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L55)
+[date.hta#L55](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L55)
 ```javascript
   args = date_calender.commandLine.split(',');
 ```
@@ -78,7 +78,7 @@ ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 上記の様に自身のファイルパスとも分別しないといけないので引数先頭にも区切り文字を置くことにする。
 
 ### 引数既定値
-[date.hta#L57](https://github.com/hs9587/date_calender/blob/90aeda0ed0f6e17253333194634a5eda094d168c/date.hta#L57)
+[date.hta#L57](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L57),L58
 ```javascript
 resizeTo( args[1]||240, args[2]||250 ); 
 moveTo( screen.width -(args[3]||210), -(args[4]||50) ); 
