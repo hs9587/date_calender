@@ -91,5 +91,18 @@ moveTo( screen.width -(args[3]||210), -(args[4]||50) );
 `resizeTo()`で実行ウィンドウの大きさ、巾と高さを設定し、  
 `moveTo()`でその左上座標の横位置縦位置を設定する、こちらは負号付けて逆向きに数えてる。
 
+### <hta:application />
+そもそも引数を見るのは JavaScript の`commandLine`。そのために冒頭`hta:application`要素を書いて`id`をつけておく。
+
+[date.hta#L2](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L2)-L7
+```javascript
+<hta:application
+  id="date_calender"
+  maximizeButton="no"
+  minimizeButton="no"
+  scroll="no"
+ />```
+それに続く設定で実行ウィンドウのふち飾りをシンプルに。
+
 ## スタイルの数字
 
