@@ -78,10 +78,12 @@ ruby -r prime -e 'ARGV.first.to_i.prime?.display'
 上記の様に自身のファイルパスとも分別しないといけないので引数先頭にも区切り文字を置くことにする。
 
 ### 引数既定値
-[date.hta#L57](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L57),L58
+[date.hta#L55](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L55)-L58
 ```javascript
-resizeTo( args[1]||240, args[2]||250 ); 
-moveTo( screen.width -(args[3]||210), -(args[4]||50) ); 
+  args = date_calender.commandLine.split(',');
+
+  resizeTo( args[1]||240, args[2]||250 );
+  moveTo( screen.width -(args[3]||210), -(args[4]||50) );
 ```
 引数先頭にも区切り文字ということで、`args[1]`が引数の数値文字列の最初。  
 `||`で続けてるのが既定値、引数の文字列がないと論理和をとってその既定値が採用される。
