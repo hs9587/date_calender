@@ -51,7 +51,8 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 ```
 ええと `2593` は素数です。
 ```ruby
-ruby -r prime -e 'ARGV.first.to_i.prime?.display'
+$ ruby -r prime -e 'ARGV.first.to_i.prime?.display' 2593
+true
 ```
 ## 引数のカンマ区切り
 [date.hta#L55](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L55)
