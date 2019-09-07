@@ -153,7 +153,7 @@ html の書き方には迷いがある。
 ### 上下の間隔(行間)
 真ん中の日付数字行、文字大きくしてるのでその分行間も広がってしまうの少し詰める。
 
-全体、`body`上辺は詰める、 `body`の `border` は内側なの注意  
+全体、`body`上辺は詰める、 `body`の `margin` は内側なの注意  
 [date.hta#L9](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L9)
 ```html
 <body style="padding-top: 0; margin-top: 0;">
