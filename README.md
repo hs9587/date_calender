@@ -190,3 +190,13 @@ html の書き方には迷いがある。
 各スタイル項の ` border: 1px solid white;` 、今は `white` にしてるので見えないが、いろいろ調整するとき領域が見える様に枠線色付けた時の名残り。
 
 ## 数字のフォーマット
+[date.hta#L64](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L64)-70
+```javascript
+    document.getElementById('view_date')   .innerHTML =      now.getDate();
+    document.getElementById('view_year')   .innerHTML =  (''+now.getFullYear()).slice(-2);
+    document.getElementById('view_month')  .innerHTML =      now.getMonth()+1;
+    document.getElementById('view_day')    .innerHTML = week[now.getDay()];
+    document.getElementById('view_hour')   .innerHTML = ('0'+now.getHours())   .slice(-2);
+    document.getElementById('view_minutes').innerHTML = ('0'+now.getMinutes()) .slice(-2);
+    document.getElementById('view_seconds').innerHTML = ('0'+now.getSeconds()) .slice(-2);
+```
