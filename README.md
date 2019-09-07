@@ -154,25 +154,25 @@ html の書き方には迷いがある。
 真ん中の日付数字行、文字大きくしてるのでその分行間も広がってしまうの少し詰める。
 
 全体、`body`上辺は詰める、 `body`の `border` は内側なの注意  
-[date.hta#L9](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L9)  
+[date.hta#L9](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L9)
 ```html
 <body style="padding-top: 0; margin-top: 0;">
 ```
 
 1行目、年月曜は `line-height: 1.5;`  
-[date.hta#L12](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L12)  
+[date.hta#L12](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L12)
 ```html
   <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
 ```
 
 日付数字は `line-height: 0.8;`  
-[date.hta#L16](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L16)  
+[date.hta#L16](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L16)
 ```html
   <p style="line-height: 0.8; margin: 0; border: 1px solid white;">
 ```
 
 時分秒は `line-height:   0;`  
-[date.hta#L32](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L32)  
+[date.hta#L32](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L32)
 ```html
   <p style="line-height:   0; margin: 0; border: 1px solid white;">
 ```
