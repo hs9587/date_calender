@@ -187,6 +187,6 @@ html の書き方には迷いがある。
 
 コメントアウト方面([date.hta#L37](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L37)-52)も同様。
 
-各スタイル項の ` border: 1px solid white;`n、今は `white` にしてるので見えないが、いろいろ調整するとき領域が見える様に枠線色付けた時の名残り。
+各スタイル項の ` border: 1px solid white;` 、今は `white` にしてるので見えないが、いろいろ調整するとき領域が見える様に枠線色付けた時の名残り。
 
 ## 数字のフォーマット
