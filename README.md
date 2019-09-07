@@ -151,5 +151,38 @@ html の書き方には迷いがある。
 今のところ後者はコメントアウト方面にしてる。
 
 ### 上下の間隔(行間)
+真ん中の日付数字行、文字大きくしてるのでその分行間も広がってしまうの少し詰める。
+
+全体、`body`上辺は詰める  
+[date.hta#L9](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L9)  
+```html
+<body style="padding-top: 0; margin-top: 0;">
+```
+
+1行目、年月曜は `line-height: 1.5;`
+[date.hta#L12](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L12)  
+```html
+  <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
+```
+
+日付数字は `line-height: 0.8;`
+[date.hta#L16](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L16)  
+```html
+  <p style="line-height: 0.8; margin: 0; border: 1px solid white;">
+```
+
+時分秒は `line-height:   0;`
+[date.hta#L32](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L32)  
+```html
+  <p style="line-height:   0; margin: 0; border: 1px solid white;">
+```
+まあ試行錯誤の結果なんだけど、これ以上は動かしにくい
+1. 3行目の高さ `0` になってる、これを少しでも大きくすると、
+2. 行間保つには 2行目の高さ減らす必要があって
+3. そうすると 1行目の高さ増やさないといけないが
+4. 全体`body` 上辺も `0` で減らしようがないので
+5. 上の余白が増えることになる
+
+逆もしかりなので、まあこんなもんかと。
 
 ## 数字のフォーマット
