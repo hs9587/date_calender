@@ -116,7 +116,38 @@ html の書き方には迷いがある。
 前者の場合、その 3つをまとめるために 全体を div要素で囲ってみる。
 
 [date.hta#L37](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L37)-L52  
-後者の場合、3つの各行を span要素で囲ってスタイル等指定することになる、今はこちらはコメントアウトしている。
+後者の場合、3つの各行を span要素で囲ってスタイル等指定することになる、今はこちらはコメントアウトしてる。
 
 ## スタイルの数字
+### 文字の大きさ
+大きさの書き方には迷いがある。
 
+相対指定がいいと思うので `font-size: larger;` を使おうかと思うのだけど、一つだけでは大きさが足りないのでネストする。
+
+[date.hta#L17](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L17)-L29  
+```html
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+    <span style="font-size: larger;">
+      <span id="view_date">d</span>
+    </span>
+    </span>
+    </span>
+    </span>
+    </span>
+    </span>
+```
+ちょっと無様。
+なら数字一つで指定すると `font-size: 7em;` か
+
+[date.hta#L44](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L44)  
+```html
+    <span id="view_date" style="font-size: 7em;">d</span>
+```
+まあ `7em` も相対指定とはいえる。  
+今のところ後者はコメントアウト方面にしてる。
+
+### 上下の間隔(行間)
