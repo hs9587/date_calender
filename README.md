@@ -200,3 +200,10 @@ html の書き方には迷いがある。
     document.getElementById('view_minutes').innerHTML = ('0'+now.getMinutes()) .slice(-2);
     document.getElementById('view_seconds').innerHTML = ('0'+now.getSeconds()) .slice(-2);
 ```
+`getElementById` でとってきた要素に時刻を表示する、要素とってくるとき地に何か書いてないと取れないの注意  
+[date.hta#L23](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L23)
+```html
+      <span id="view_date">d</span>
+```
+の `d` とか。
+
