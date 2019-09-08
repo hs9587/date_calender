@@ -125,7 +125,7 @@ html の書き方には迷いがある。
 相対指定がいいと思うので `font-size: larger;` を使おうかと思うのだけど、一つだけでは大きさが足りないのでネストする。
 
 [date.hta#L17](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L17)-L29  
-```css
+```html
     <span style="font-size: larger;">
     <span style="font-size: larger;">
     <span style="font-size: larger;">
@@ -161,7 +161,7 @@ html の書き方には迷いがある。
 
 1行目、年月曜は `line-height: 1.5;`  
 [date.hta#L12](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L12)
-```css
+```html
   <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
 ```
 
