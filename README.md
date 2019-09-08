@@ -189,7 +189,7 @@ html の書き方には迷いがある。
 
 各スタイル項の ` border: 1px solid white;` 、今は `white` にしてるので見えないが、いろいろ調整するとき領域が見える様に枠線色付けた時の名残り。
 
-## 数字のフォーマット
+## 時間の表示
 [date.hta#L64](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L64)-70
 ```javascript
     document.getElementById('view_date')   .innerHTML =      now.getDate();
@@ -207,3 +207,8 @@ html の書き方には迷いがある。
 ```
 の `d` とか。
 
+### 年
+年をとってくるには `getFullYear()` を使う、4桁年号。  
+`getYear()` はもう勧められてない。
+
+### 数字のフォーマット
