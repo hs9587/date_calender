@@ -161,7 +161,7 @@ html の書き方には迷いがある。
 
 1行目、年月曜は `line-height: 1.5;`  
 [date.hta#L12](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L12)
-```html
+```
   <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
 ```
 
