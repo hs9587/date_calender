@@ -31,7 +31,25 @@
 
   <p style="line-height:   0; margin: 0; border: 1px solid white;">
     <span id="view_hour">hh</span>:<span id="view_minutes">mm</span>:<span id="view_seconds">ss</span>
-  </p>  
+  </p>
+
+  <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
+    UTC/<span id="view_utc_month">MM</span>/<span id="view_utc_date">dd</span> <span id="view_utc_hours">hh</span>
+  </p>
+  <p style="line-height:   0; margin: 0; border: 1px solid white;">
+    <span id="view_pt_zone">PT</span>/<span id="view_pt_month">MM</span>/<span id="view_pt_date">dd</span> <span id="view_pt_hours">hh</span>
+  </p>
+  <p style="line-height: 1.5; margin: 0; border: 1px solid white; color: white">
+    PDT/<span id="view_pdt_month">MM</span>/<span id="view_pdt_date">dd</span> <span id="view_pdt_hours">hh</span>
+  </p>
+  <p style="line-height:   0; margin: 0; border: 1px solid white; color: white">
+    PST/<span id="view_pst_month">MM</span>/<span id="view_pst_date">dd</span> <span id="view_pst_hours">hh</span>
+  </p>
+
+  <p style="line-height: 1.5; margin: 0; border: 1px solid white; color: white">
+    <span id="now_get_time">miriseconds</span>
+  </p>
+
 </div>
 
 <!--
@@ -54,13 +72,38 @@
 <script type="text/javascript">
   args = date_calender.commandLine.split(',');
 
-  resizeTo( args[1]||240, args[2]||250 );
+  resizeTo( args[1]||240, args[2]||285 );
   moveTo( screen.width -(args[3]||210), -(args[4]||50) );
 
   var week = new Array('“ú','Œ','‰Î','…','–Ø','‹à','“y','“ú');
 
   function view_date() {
     var now = new Date();
+    var pt  = {};
+    pt['PST'] = new Date(now.getTime() - 8 * 60 * 60 * 1000); // ‘¾•½—m•W€
+    pt['PDT'] = new Date(now.getTime() - 7 * 60 * 60 * 1000); // ‘¾•½—m‰ÄŠÔ 3Œ‘æ2“ú—jŒß‘O2 - 11Œ‘æ1“ú—jŒß‘O2
+
+    var pt_zone = 'PST';
+/*
+<% require 'time'; require 'active_support/time' %>
+<% (19..30).each do |y| %>
+if (<%= (Time.parse (Time.parse("20#{y}-03-01").next_week(:sunday)+7200).to_s.sub('+0900', 'PST')).to_i*1000 %> < now.getTime() && now.getTime() < <%= (Time.parse (Time.parse("20#{y}-11-01").next_week(:sunday).ago(1.week)+7200).to_s.sub('+0900', 'PDT')).to_i*1000 %>) { pt_zone = 'PDT' } // <%= y %> <% end %>
+ */
+if (1552212000000 < now.getTime() && now.getTime() < 1572771600000) { pt_zone = 'PDT' } // 19
+if (1583661600000 < now.getTime() && now.getTime() < 1604221200000) { pt_zone = 'PDT' } // 20
+if (1615716000000 < now.getTime() && now.getTime() < 1636275600000) { pt_zone = 'PDT' } // 21
+if (1647165600000 < now.getTime() && now.getTime() < 1667725200000) { pt_zone = 'PDT' } // 22
+if (1678615200000 < now.getTime() && now.getTime() < 1699174800000) { pt_zone = 'PDT' } // 23
+if (1710064800000 < now.getTime() && now.getTime() < 1730624400000) { pt_zone = 'PDT' } // 24
+if (1741514400000 < now.getTime() && now.getTime() < 1762074000000) { pt_zone = 'PDT' } // 25
+if (1772964000000 < now.getTime() && now.getTime() < 1793523600000) { pt_zone = 'PDT' } // 26
+if (1805018400000 < now.getTime() && now.getTime() < 1825578000000) { pt_zone = 'PDT' } // 27
+if (1836468000000 < now.getTime() && now.getTime() < 1857027600000) { pt_zone = 'PDT' } // 28
+if (1867917600000 < now.getTime() && now.getTime() < 1888477200000) { pt_zone = 'PDT' } // 29
+if (1899367200000 < now.getTime() && now.getTime() < 1919926800000) { pt_zone = 'PDT' } // 30
+
+    document.getElementById('now_get_time').innerHTML =      now.getTime();
+
     document.getElementById('view_date')   .innerHTML =      now.getDate();
     document.getElementById('view_year')   .innerHTML =  (''+now.getFullYear()).slice(-2);
     document.getElementById('view_month')  .innerHTML =      now.getMonth()+1;
@@ -68,6 +111,26 @@
     document.getElementById('view_hour')   .innerHTML = ('0'+now.getHours())   .slice(-2);
     document.getElementById('view_minutes').innerHTML = ('0'+now.getMinutes()) .slice(-2);
     document.getElementById('view_seconds').innerHTML = ('0'+now.getSeconds()) .slice(-2);
+
+    document.getElementById('view_utc_month').innerHTML = ('0'+(now.getUTCMonth()+1)).slice(-2);
+    document.getElementById('view_utc_date') .innerHTML = ('0'+ now.getUTCDate())    .slice(-2);
+    document.getElementById('view_utc_hours').innerHTML = ('0'+ now.getUTCHours())   .slice(-2);
+
+    // ‘¾•½—m•W€
+    document.getElementById('view_pst_month').innerHTML = ('0'+(pt['PST'].getUTCMonth()+1)).slice(-2);
+    document.getElementById('view_pst_date') .innerHTML = ('0'+ pt['PST'].getUTCDate())    .slice(-2);
+    document.getElementById('view_pst_hours').innerHTML = ('0'+ pt['PST'].getUTCHours())   .slice(-2);
+
+    // ‘¾•½—m‰ÄŠÔ
+    document.getElementById('view_pdt_month').innerHTML = ('0'+(pt['PDT'].getUTCMonth()+1)).slice(-2);
+    document.getElementById('view_pdt_date') .innerHTML = ('0'+ pt['PDT'].getUTCDate())    .slice(-2);
+    document.getElementById('view_pdt_hours').innerHTML = ('0'+ pt['PDT'].getUTCHours())   .slice(-2);
+
+    // ‘¾•½—mŠÔ
+    document.getElementById('view_pt_zone')  .innerHTML = pt_zone;
+    document.getElementById('view_pt_month') .innerHTML = ('0'+(pt[pt_zone].getUTCMonth()+1)).slice(-2);
+    document.getElementById('view_pt_date')  .innerHTML = ('0'+ pt[pt_zone].getUTCDate())    .slice(-2);
+    document.getElementById('view_pt_hours') .innerHTML = ('0'+ pt[pt_zone].getUTCHours())   .slice(-2);
   }
 
   view_date();
