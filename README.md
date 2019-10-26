@@ -31,7 +31,8 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 ## 追記 2019/10/
 協定世界時(UTC)、太平洋時間(PST/PDT切替え、米西海岸)の日付も出すようにした。
 
-アマゾンのAWS [Service Health Dashboard](https://status.aws.amazon.com/) が太平洋時間表示してて、最新今日の日付と知るのに見たかった。
+アマゾンのAWS [Service Health Dashboard](https://status.aws.amazon.com/) が太平洋時間表示してて、それが最新今日の日付と知るのに見たかった。  
+ついでなんで UTC もだす、ときどきそういうのあるんで。
 
 # プログラムについて
 ## HTA
