@@ -238,6 +238,7 @@ JavaScript には暗黙の型変換がある。
 太平洋時間(PST/PDT) はそこからの時差を手で調整する。
 - https://www.time-j.net/WorldTime/Country/US
 - https://24timezones.com/taimuzon/pt
+
 より
 - 太平洋標準時 PST、UTC-0800
 - 太平洋夏時間 PDT、UTC-0700
