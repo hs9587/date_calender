@@ -211,7 +211,7 @@ html の書き方には迷いがある。
 )
 
 ## 時間の表示
-[date.hta#L64](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L64)-70
+[date.hta#L107](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L107)-113
 ```javascript
     document.getElementById('view_date')   .innerHTML =      now.getDate();
     document.getElementById('view_year')   .innerHTML =  (''+now.getFullYear()).slice(-2);
