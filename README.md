@@ -34,10 +34,6 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 アマゾンAWS [Service Health Dashboard](https://status.aws.amazon.com/) が太平洋時間表示してて、それが最新今日の日付と知るのに見たかった。  
 ついでなんで UTC も出す、そういうのそれなりあるんで。
 
-- https://www.time-j.net/WorldTime/Country/US
-- https://24timezones.com/taimuzon/pt
-- 3月の第2日曜日午前2:00～11月第1日曜日午前2:00
-
 # プログラムについて
 ## HTA
 取り敢えず Ruby で GUI を探したんだけど、2.後半の頃(2019)だと手軽そうなの思いつかなった。
@@ -233,3 +229,8 @@ JavaScript には暗黙の型変換がある。
 
 二桁左零詰めのフォーマット、数値に文字列の `'0'` を左から繋げると文字列になり、 `slice(-2)` で右から 2文字とる。  
 年には左零無くていいけど、空文字列を繋げると文字列になるから。
+
+### UTC, PT(PST/PDT)
+- https://www.time-j.net/WorldTime/Country/US
+- https://24timezones.com/taimuzon/pt
+- 3月の第2日曜日午前2:00～11月第1日曜日午前2:00
