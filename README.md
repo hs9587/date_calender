@@ -56,7 +56,7 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 一桁の数字が連なっても分かるようにコロン「:」で区切る、その幅もあるよね。
 
 ### 3秒置き
-[date.hta#L74](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L74)
+[date.hta#L137](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L137)
 ```javascript
   setInterval('view_date()',2593);
 ```
@@ -66,7 +66,7 @@ $ ruby -r prime -e 'ARGV.first.to_i.prime?.display' 2593
 true
 ```
 ## 引数のカンマ区切り
-[date.hta#L55](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L55)
+[date.hta#L73](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L73)
 ```javascript
   args = date_calender.commandLine.split(',');
 ```
@@ -90,11 +90,11 @@ true
 上記の様に自身のファイルパスとも分別しないといけないので引数先頭にも区切り文字を置くことにする。
 
 ### 引数既定値
-[date.hta#L55](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L55)-L58
+[date.hta#L73](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L73)-L76
 ```javascript
   args = date_calender.commandLine.split(',');
 
-  resizeTo( args[1]||240, args[2]||250 );
+  resizeTo( args[1]||240, args[2]||285 );
   moveTo( screen.width -(args[3]||210), -(args[4]||50) );
 ```
 引数先頭にも区切り文字ということで、 `args[1]` が引数の数値文字列の最初。  
@@ -108,7 +108,7 @@ true
 ### <hta:application />
 そもそも引数を見るのは JavaScript の `commandLine` 。そのために冒頭 `hta:application`要素を書いて `id` をつけておく。
 
-[date.hta#L2](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L2)-L7
+[date.hta#L2](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L2)-L7
 ```javascript
 <hta:application
   id="date_calender"
@@ -123,11 +123,16 @@ true
 html の書き方には迷いがある。  
 月日曜、日付、時分秒の 3行、これらは 3つのパラグラフ(`p`要素)に分けた方がいいのだろうか、それともひとつのパラグラフ(`p`要素)にまとめた方がいいのだろうか。
 
-[date.hta#L11](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L11)-L35  
+[date.hta#L12](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L12)-L34  
 前者の場合、その 3つをまとめるために全体を `div`要素で囲ってみる。
 
-[date.hta#L37](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L37)-L52  
+[date.hta#L56](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L56)-L69  
 後者の場合、3つの各行を `span`要素で囲ってスタイル等指定することになる、今はこちらはコメントアウトしてる。
+
+(
+[その後](https://github.com/hs9587/date_calender#%E8%BF%BD%E8%A8%98-201910)
+の UTC や PST/PDT の表示では前者に `p`要素を追加した。
+)
 
 ## スタイルの数字
 ### 文字の大きさ
@@ -135,7 +140,7 @@ html の書き方には迷いがある。
 
 相対指定がいいと思うので `font-size: larger;` を使おうかと思うのだけど、一つだけでは大きさが足りないのでネストする。
 
-[date.hta#L17](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L17)-L29  
+[date.hta#L17](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L17)-L29  
 ```html
     <span style="font-size: larger;">
     <span style="font-size: larger;">
@@ -154,7 +159,7 @@ html の書き方には迷いがある。
 ちょっと無様。
 なら数字一つで指定すると `font-size: 7em;` か
 
-[date.hta#L44](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L44)  
+[date.hta#L44](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L44)  
 ```html
     <span id="view_date" style="font-size: 7em;">d</span>
 ```
@@ -165,25 +170,25 @@ html の書き方には迷いがある。
 真ん中の日付数字行、文字大きくしてるのでその分行間も広がってしまうの少し詰める。
 
 全体、`body`上辺は詰める、 `body`の `margin` は内側なの注意  
-[date.hta#L9](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L9)
+[date.hta#L9](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L9)
 ```html
 <body style="padding-top: 0; margin-top: 0;">
 ```
 
 1行目、年月曜は `line-height: 1.5;`  
-[date.hta#L12](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L12)
+[date.hta#L12](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L12)
 ```html
   <p style="line-height: 1.5; margin: 0; border: 1px solid white;">
 ```
 
 日付数字は `line-height: 0.8;`  
-[date.hta#L16](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L16)
+[date.hta#L16](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L16)
 ```html
   <p style="line-height: 0.8; margin: 0; border: 1px solid white;">
 ```
 
 時分秒は `line-height:   0;`  
-[date.hta#L32](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L32)
+[date.hta#L32](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L32)
 ```html
   <p style="line-height:   0; margin: 0; border: 1px solid white;">
 ```
@@ -196,12 +201,12 @@ html の書き方には迷いがある。
 
 逆もしかりなので、まあこんなもんかと。
 
-コメントアウト方面([date.hta#L37](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L37)-52)も同様。
+コメントアウト方面([date.hta#L37](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L37)-52)も同様。
 
 各スタイル項の ` border: 1px solid white;` 、今は `white` にしてるので見えないが、いろいろ調整するとき領域が見える様に枠線色付けた時の名残り。
 
 ## 時間の表示
-[date.hta#L64](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L64)-70
+[date.hta#L64](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L64)-70
 ```javascript
     document.getElementById('view_date')   .innerHTML =      now.getDate();
     document.getElementById('view_year')   .innerHTML =  (''+now.getFullYear()).slice(-2);
@@ -212,7 +217,7 @@ html の書き方には迷いがある。
     document.getElementById('view_seconds').innerHTML = ('0'+now.getSeconds()) .slice(-2);
 ```
 `getElementById()` でとってきた要素に時間を表示する、要素とってくるとき地に何か書いてないと取れないの注意  
-[date.hta#L23](https://github.com/hs9587/date_calender/blob/20190817-0/date.hta#L23)
+[date.hta#L23](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L23)
 ```html
       <span id="view_date">d</span>
 ```
