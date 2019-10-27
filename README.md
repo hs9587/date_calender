@@ -29,10 +29,10 @@ Windows7 にデスクトップガジェットというのがあって、いろ�
 左下隅はスタート釦に近く、その連想で適度に用のあるショートカットを置いてる。  
 
 ## 追記 2019/10/
-協定世界時(UTC)、太平洋時間(PST/PDT切替え、米西海岸)の日付も出すようにした。
+協定世界時(UTC)、米西海岸の太平洋時間(PST/PDT切替え) の日付も出すようにした。
 
-アマゾンのAWS [Service Health Dashboard](https://status.aws.amazon.com/) が太平洋時間表示してて、それが最新今日の日付と知るのに見たかった。  
-ついでなんで UTC も出す、ときどきそういうのあるんで。
+アマゾンAWS [Service Health Dashboard](https://status.aws.amazon.com/) が太平洋時間表示してて、それが最新今日の日付と知るのに見たかった。  
+ついでなんで UTC も出す、そういうのそれなりあるんで。
 
 - https://www.time-j.net/WorldTime/Country/US
 - https://24timezones.com/taimuzon/pt
