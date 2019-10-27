@@ -159,7 +159,7 @@ html の書き方には迷いがある。
 ちょっと無様。
 なら数字一つで指定すると `font-size: 7em;` か
 
-[date.hta#L44](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L44)  
+[date.hta#L62](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L62)  
 ```html
     <span id="view_date" style="font-size: 7em;">d</span>
 ```
@@ -201,9 +201,14 @@ html の書き方には迷いがある。
 
 逆もしかりなので、まあこんなもんかと。
 
-コメントアウト方面([date.hta#L37](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L37)-52)も同様。
+コメントアウト方面([date.hta#L56](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L56)-69)も同様。
 
 各スタイル項の ` border: 1px solid white;` 、今は `white` にしてるので見えないが、いろいろ調整するとき領域が見える様に枠線色付けた時の名残り。
+
+(
+[その後](https://github.com/hs9587/date_calender#%E8%BF%BD%E8%A8%98-201910)
+の UTC や PST/PDT の表示でも `line-height: 1.5;` と `line-height:   0;` 交互に。
+)
 
 ## 時間の表示
 [date.hta#L64](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L64)-70
