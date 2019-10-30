@@ -39,14 +39,14 @@
   <p style="line-height:   0; margin: 0; border: 1px solid white;">
     <span id="view_pt_zone">PT</span>/<span id="view_pt_month">MM</span>/<span id="view_pt_date">dd</span> <span id="view_pt_hours">hh</span>
   </p>
-  <p style="line-height: 1.5; margin: 0; border: 1px solid white; color: white">
+  <p style="line-height: 1.8; margin: 0; border: 1px solid white; color: white">
     PDT/<span id="view_pdt_month">MM</span>/<span id="view_pdt_date">dd</span> <span id="view_pdt_hours">hh</span>
   </p>
   <p style="line-height:   0; margin: 0; border: 1px solid white; color: white">
     PST/<span id="view_pst_month">MM</span>/<span id="view_pst_date">dd</span> <span id="view_pst_hours">hh</span>
   </p>
 
-  <p style="line-height: 1.5; margin: 0; border: 1px solid white; color: white">
+  <p style="line-height: 1.8; margin: 0; border: 1px solid white; color: white">
     <span id="now_get_time">miriseconds</span>
   </p>
 
@@ -84,6 +84,7 @@
     pt['PDT'] = new Date(now.getTime() - 7 * 60 * 60 * 1000); // ‘¾•½—m‰ÄŽžŠÔ 3ŒŽ‘æ2“ú—jŒß‘O2Žž - 11ŒŽ‘æ1“ú—jŒß‘O2Žž
 
     var pt_zone = 'PST';
+
 /* pdt_check.erb
 <% require 'time'; require 'active_support/time' %>
 <% (19..30).each do |y| %>
