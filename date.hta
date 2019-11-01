@@ -106,7 +106,8 @@ if (1899367200000 < now.getTime() && now.getTime() < 1919926800000) { pt_zone = 
     document.getElementById('now_get_time').innerHTML =      now.getTime();
 
     document.getElementById('view_date')   .innerHTML =      now.getDate();
-    document.getElementById('view_year')   .innerHTML =  (''+now.getFullYear()).slice(-2);
+//    document.getElementById('view_year')   .innerHTML =  (''+now.getFullYear()).slice(-2);
+    document.getElementById('view_year')   .innerHTML =      now.getFullYear();
     document.getElementById('view_month')  .innerHTML =      now.getMonth()+1;
     document.getElementById('view_day')    .innerHTML = week[now.getDay()];
     document.getElementById('view_hour')   .innerHTML = ('0'+now.getHours())   .slice(-2);
