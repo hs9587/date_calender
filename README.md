@@ -235,7 +235,7 @@ html の書き方には迷いがある。
 
 ### 数字のフォーマット
 JavaScript には暗黙の型変換がある。
-- [上記](https://github.com/hs9587/date_calender/blob/master/README.md#%E5%B9%B4)より 4桁でとれた年はやっぱり二桁だけ取る。
+- ~~[上記](https://github.com/hs9587/date_calender/blob/master/README.md#%E5%B9%B4)より 4桁でとれた年はやっぱり二桁だけ取る。~~
 - 月は 0 始まりなの調整。
 - 曜は漢字表記がいいので別に配列を作っておいて頑張る。
 - 時分秒は二桁左零詰めにしたい。
