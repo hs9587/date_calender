@@ -269,7 +269,7 @@ JavaScript には暗黙の型変換がある。
 
 ちょっと大変そうなので、
 別に計算した境界日時の起算時からのミリ秒数との比較で切り替えることにする。
-十年分くらい計算しとけばいいか、 `erb`。
+取り合えず十年分くらい。
 
 
 [date.hta#L92](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L92)-103
@@ -280,8 +280,7 @@ if (1583661600000 < now.getTime() && now.getTime() < 1604221200000) { pt_zone = 
 if (1899367200000 < now.getTime() && now.getTime() < 1919926800000) { pt_zone = 'PDT' } // 30
 
 ```
-数字は次の `erb` で計算した、第2、第1日曜の記述注意
-
+数字は次の `erb`([pdt_check.erb](https://github.com/hs9587/date_calender/blob/master/pdt_check.erb)) で計算した、第2、第1日曜の記述注意
 
 [date.hta#L88](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L88)-90
 ```erb
