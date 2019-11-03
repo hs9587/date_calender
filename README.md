@@ -280,7 +280,7 @@ if (1583661600000 < now.getTime() && now.getTime() < 1604221200000) { pt_zone = 
 if (1899367200000 < now.getTime() && now.getTime() < 1919926800000) { pt_zone = 'PDT' } // 30
 
 ```
-数字は次の `erb`([pdt_check.erb](https://github.com/hs9587/date_calender/blob/master/pdt_check.erb)) で計算した、第2、第1日曜の記述注意
+数字は次の `erb`([pdt_check.erb](https://github.com/hs9587/date_calender/blob/master/pdt_check.erb)) で計算した、第2、第1日曜の記述注意。
 
 [date.hta#L88](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L88)-90
 ```erb
@@ -289,12 +289,15 @@ if (1899367200000 < now.getTime() && now.getTime() < 1919926800000) { pt_zone = 
 if (<%= (Time.parse (Time.parse("20#{y}-03-01").next_week(:sunday)+7200).to_s.sub('+0900', 'PST')).to_i*1000 %> < now.getTime() && now.getTime() < <%= (Time.parse (Time.parse("20#{y}-11-01").next_week(:sunday).ago(1.week)+7200).to_s.sub('+0900', 'PDT')).to_i*1000 %>) { pt_zone = 'PDT' } // <%= y %> <% end %>
 
 ```
-```(19..30)```
-```03-01``` ```11-01```
-```Time.parse```
-```next_week(:sunday)```
-```7200```
-```.ago(1.week)```
-```sub('+0900', 'PST')```
-```sub('+0900', 'PDT')```
+```(19..30)``` 取り敢えず 2030年まで、その頃になったらまた。
+月初日```03-01```, ```11-01``` 文字列からパース、
+```Time.parse``` は```require 'time'``` より。
+```.next_week(:sunday)```,
+```.ago(1.week)``` は active_support より、
+第1日曜は直接そういうのなくて翌週日曜から1週間戻る。
+```7200```秒は2時間。
+得られた時刻を文字列化すると JST(符号数字表記)になるので
+```sub('+0900', 'PST')```,
+```sub('+0900', 'PDT')``` でそれぞれの時間帯の表記に、
+そしてまたパース。
 
