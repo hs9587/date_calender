@@ -272,3 +272,12 @@ JavaScript には暗黙の型変換がある。
 十年分くらい計算しとけばいいか、`erb`。
 
 
+[date.hta#L92](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L92)-103
+```javascript
+if (1552212000000 < now.getTime() && now.getTime() < 1572771600000) { pt_zone = 'PDT' } // 19
+if (1583661600000 < now.getTime() && now.getTime() < 1604221200000) { pt_zone = 'PDT' } // 20
+  ……
+if (1899367200000 < now.getTime() && now.getTime() < 1919926800000) { pt_zone = 'PDT' } // 30
+
+```
+
