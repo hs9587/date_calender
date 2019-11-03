@@ -290,3 +290,12 @@ if (1899367200000 < now.getTime() && now.getTime() < 1919926800000) { pt_zone = 
 if (<%= (Time.parse (Time.parse("20#{y}-03-01").next_week(:sunday)+7200).to_s.sub('+0900', 'PST')).to_i*1000 %> < now.getTime() && now.getTime() < <%= (Time.parse (Time.parse("20#{y}-11-01").next_week(:sunday).ago(1.week)+7200).to_s.sub('+0900', 'PDT')).to_i*1000 %>) { pt_zone = 'PDT' } // <%= y %> <% end %>
 
 ```
+```(19..30)```
+```03-01``` ```11-01```
+```Time.parse```
+```next_week(:sunday)```
+```7200```
+```.ago(1.week)```
+```sub('+0900', 'PST')```
+```sub('+0900', 'PDT')```
+
