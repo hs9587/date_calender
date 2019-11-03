@@ -269,7 +269,7 @@ JavaScript には暗黙の型変換がある。
 
 ちょっと大変そうなので、
 別に計算した境界日時の起算時からのミリ秒数との比較で切り替えることにする。
-取り合えず十年分くらい。
+取り敢えず十年分くらい。
 
 
 [date.hta#L92](https://github.com/hs9587/date_calender/blob/20191027-0/date.hta#L92)-103
@@ -294,7 +294,7 @@ if (<%= (Time.parse (Time.parse("20#{y}-03-01").next_week(:sunday)+7200).to_s.su
 ```Time.parse``` は```require 'time'``` より。
 ```.next_week(:sunday)```,
 ```.ago(1.week)``` は active_support より、
-第1日曜は直接そういうのなくて翌週日曜から1週間戻る。
+第1日曜はそういうのなんかなくて翌週日曜から1週間戻る。
 午前2時は ```7200```(秒)足す。
 得られた時刻を文字列化すると JST(符号数字表記)になるので
 ```sub('+0900', 'PST')```,
