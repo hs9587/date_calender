@@ -5,5 +5,6 @@ module.exports = {
     'README.md',
     'mml.md',
     'mmlAI.md',
+    'mml.err.md',
   ]
 }
