@@ -3,5 +3,7 @@ module.exports = {
   author: 'hs9587',
   entry: [
     'README.md',
+    'mml.md',
+    'mmlAI.md',
   ]
 }
