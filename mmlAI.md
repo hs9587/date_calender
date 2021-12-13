@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>AIの友達 数学の問題</title>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-</head>
 <body>
   <h1>AIの友達 数学の問題</h1>
 <h3>覚え書き</h2>
@@ -1315,7 +1309,6 @@ No. の数字は kindle版の 位置No. です
 </p>
 
 </body>
-</html>
 <!-- 以下は本から写したの、儘、それを参考に上に提出用の定式化をした
 <!DOCTYPE html>
 <html>

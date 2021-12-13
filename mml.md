@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>MathML my test</title>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-</head>
 <body>
 <p>
 <code>none</code>—v‘f‚Æ‚¢‚¤‚Ì‚à‚ ‚é‚¯‚Ç
@@ -1674,4 +1668,3 @@ tyg
 </ul>
 
 </body>
-</html>
