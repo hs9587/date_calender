@@ -1,6 +1,6 @@
 <body>
 <p>
-<code>none</code>�v�f�Ƃ����̂����邯��
+<code>none</code>要素というのもあるけど
 <br />
 <math>
   <mrow>
@@ -10,7 +10,7 @@
   </mrow>
 </math>
 <br />
-���ʂ̕����ł͓��ɉ�������
+普通の文脈では特に何も無い
 </p>
 
 <p>
@@ -38,24 +38,24 @@
     </mlabeledtr>
   </mtable>
 </math>
-���ԍ��� <code>mlabeledtr</code> �̍ŏ��� <code>mtd</code> �ɁA
-����ŉE�ɂ���������邪
+式番号は <code>mlabeledtr</code> の最初の <code>mtd</code> に、
+それで右についたりもするが
 </p>
 
 <p>
-�����c�ɔz�u����̂� <code>mtable</code> ���g���A
-���̂Ƃ���ق��ɖ������B
+式を縦に配置するのは <code>mtable</code> を使う、
+今のところほかに無いし。
 <br />
-���̂Ƃ��A�ǂ����c�ɍ��킹�A�Ǖӂ����炵�Ē������Ă����̂��A�w�����K�v�ŁA
-<code>maligngroup</code>, <code>malignmark</code> �Ƃ��g��
+そのとき、どこを縦に合わせ、ど辺をずらして調整していいのか、指示が必要で、
+<code>maligngroup</code>, <code>malignmark</code> とか使う
 </p>
 
 <p>
-<code>mtable</code>�v�f�̑��� <code>alignmentscope="false"</code> �̓�A<del>��q</del>
+<code>mtable</code>要素の属性 <code>alignmentscope="false"</code> の謎、<del>後述</del>
 </p>
 
 <p>
-�Ƃ����킯�ŁA�撣���ăX�y�[�X�Ƃ��Œ������������
+というわけで、頑張ってスペースとかで調整したこれを
 </p>
 
 qwer
@@ -63,7 +63,7 @@ qwer
 <math>
   <mrow>
     <mspace width="1.5em">
-
+　
     <mfenced>
       <mrow>
         <mover><mi>OP</mi><mo>&rarr;</mo></mover>
@@ -71,7 +71,7 @@ qwer
         <mover><mi>OH</mi><mo>&rarr;</mo></mover>
       </mrow>
     </mfenced>
-
+　
     <mo>&sdot;</mo>
     <mfenced>
       <mtable>
@@ -79,9 +79,9 @@ qwer
         <mtr><mtd><mi>b</mi></mtd></mtr>
       </mtable>
     </mfenced>
-
+　
     <mo>=</mo>
-
+　
     <mi>t</mi>
     <mo>&it;</mo>
     <mfenced>
@@ -97,9 +97,9 @@ qwer
         <mtr><mtd><mi>b</mi></mtd></mtr>
       </mtable>
     </mfenced>
-
+　
     <mspace width="2em"/>
-    <mtext>���ς������</mtext>
+    <mtext>内積を取った</mtext>
 </math>
 <br />
 <math>
@@ -143,7 +143,7 @@ qwer
     </mfenced>
 
     <mspace width="2em"/>
-    <mtext>�J�b�R���O���ēW�J����</mtext>
+    <mtext>カッコを外して展開した</mtext>
 </math>
 <br />
 <math>
@@ -182,7 +182,7 @@ qwer
     <mover><mi>OH</mi><mo>&rarr;</mo></mover>
     <mtext>
       &thinsp;
-      ��
+      と
     </mtext>
     <mfenced>
       <mtable>
@@ -192,7 +192,7 @@ qwer
     </mfenced>
     <mtext>
       &thinsp;
-      �͐����Ȃ̂œ��ς�
+      は垂直なので内積は
       &thinsp;
     </mtext>
     <mn>0</mn>
@@ -246,7 +246,7 @@ qwer
     </mfenced>
     <mtext>
       &thinsp;
-      ������
+      だから
     </mtext>
 </math>
 <br />
@@ -283,7 +283,7 @@ qwer
     </mfenced>
 
     <mspace width="2em"/>
-    <mtext>���ς𐬕��Ōv�Z����</mtext>
+    <mtext>内積を成分で計算した</mtext>
 </math>
 <br />
 <math>
@@ -313,7 +313,7 @@ qwer
     </mfenced>
 
     <mspace width="2em"/>
-    <mtext>��������</mtext>
+    <mtext>整理した</mtext>
 </math>
 <br />
 <math>
@@ -343,13 +343,13 @@ qwer
     <msub><mi>y</mi><mn>0</mn></msub>
 
     <mspace width="2em"/>
-    <mtext>���ӂ���������</mtext>
+    <mtext>両辺を交換した</mtext>
   </mrow>
 </math>
 </p>
 
 <p>
-<code>malign�]�X</code> �ł���Ă݂�
+<code>malign云々</code> でやってみる
 </p>
 
 asdf
@@ -399,7 +399,7 @@ asdf
           </mfenced>
       
           <maligngroup />
-          <mtext>���ς������</mtext>
+          <mtext>内積を取った</mtext>
           <maligngroup />
         </mrow>
       </mtd>
@@ -451,7 +451,7 @@ asdf
           </mfenced>
       
           <maligngroup />
-          <mtext>�J�b�R���O���ēW�J����</mtext>
+          <mtext>カッコを外して展開した</mtext>
           <maligngroup />
         </mrow>
       </mtd>
@@ -496,7 +496,7 @@ asdf
           <mover><mi>OH</mi><mo>&rarr;</mo></mover>
           <mtext>
             &thinsp;
-            ��
+            と
           </mtext>
           <mfenced>
             <mtable>
@@ -506,7 +506,7 @@ asdf
           </mfenced>
           <mtext>
             &thinsp;
-            �͐����Ȃ̂œ��ς�
+            は垂直なので内積は
             &thinsp;
           </mtext>
           <mn>0</mn>
@@ -566,7 +566,7 @@ asdf
           </mfenced>
           <mtext>
             &thinsp;
-            ������
+            だから
           </mtext>
           <maligngroup />
         </mrow>
@@ -609,7 +609,7 @@ asdf
           </mfenced>
       
           <maligngroup />
-          <mtext>���ς𐬕��Ōv�Z����</mtext>
+          <mtext>内積を成分で計算した</mtext>
           <maligngroup />
         </mrow>
       </mtd>
@@ -645,7 +645,7 @@ asdf
           </mfenced>
       
           <maligngroup />
-          <mtext>��������</mtext>
+          <mtext>整理した</mtext>
           <maligngroup />
         </mrow>
       </mtd>
@@ -681,7 +681,7 @@ asdf
           <msub><mi>y</mi><mn>0</mn></msub>
       
           <maligngroup />
-          <mtext>���ӂ���������</mtext>
+          <mtext>両辺を交換した</mtext>
           <maligngroup />
         </mrow>
       </mtd>
@@ -693,7 +693,7 @@ zxcv
 <p style="margin-left: 2em;">
 <a href="https://www.w3.org/TR/MathML3/chapter3.html#id.3.5.5.8">
 3.5.5.8 MathML representation of an alignment example</a>
-(MathML Version 3.0) ���A�Ꭶ���R�s�y 
+(MathML Version 3.0) より、例示をコピペ 
 <math>
 <mtable groupalign=
          "{decimalpoint left left decimalpoint left left decimalpoint}">
@@ -761,26 +761,26 @@ zxcv
 </p>
 <!--
 <p>
-<code>malignmark</code> �� <code>edge</code>�����́A
-<code>right</code>�Œ����v�f�̉E�[�A
- <code>left</code>�Œ��E�v�f�̍��[�A
-�������A����l�� <code>left</code> ���E�v�f�̍��[
+<code>malignmark</code> は <code>edge</code>属性の、
+<code>right</code>で直左要素の右端、
+ <code>left</code>で直右要素の左端、
+を示す、既定値は <code>left</code> 直右要素の左端
 </p>
  -->
 <p>
 <a href="https://www.w3.org/TR/MathML3/chapter3.html#presm.malign">
 Alignment Markers &lt;maligngroup/&gt;, &lt;malignmark/&gt;</a>
-�͎����������Ȃ��݂���
+は実装が効かないみたい
 </p>
 <p>
 <a href="https://www.mathjax.org/#gettingstarted">
 MathJax Getting Started</a>
-���A�o�[�W�����オ���Ă�(2.7.5 &lt;- 2.7.2)(2019/6/15����)�̒������Ă�
-<code>malign�]�X</code> �����Ȃ������ς�炸�A
-<code>latest</code> �Ƃ����̂�����̂�
+より、バージョン上がってた(2.7.5 &lt;- 2.7.2)(2019/6/15現在)の調整しても
+<code>malign云々</code> 効かない感じ変わらず、
+<code>latest</code> というのもあるのか
 </p>
 <p>
-malign�]�X�A�ŏ����ł�����������
+malign云々、最小限でもう少し試す
 </p>
 poiu
 <p style="margin-left: 2em;">
@@ -816,7 +816,7 @@ poiu
 </math>
 </p>
 <p>
-����ςȂ�Ȃ�
+やっぱならない
 </p>
 <p style="margin-left: 2em;">
 <math alignmentscope="true">
@@ -851,11 +851,11 @@ poiu
 </math>
 </p>
 <p>
-<code>alignmentscope="true"</code> �����I�ɐݒ肵�Ă݂����ǂȂ�Ȃ�
+<code>alignmentscope="true"</code> 明示的に設定してみたけどならない
 </p>
 
 <p>
-�Ȃ� <code>mtable</code>�� <code>mtd</code>�ňʒu���킹
+なら <code>mtable</code>で <code>mtd</code>で位置合わせ
 </p>
 lkjh
 <p style="margin-left: 2em;">
@@ -910,7 +910,7 @@ lkjh
       </mtd>
       <mtd>
         <mrow>
-          <mtext>���ς������</mtext>
+          <mtext>内積を取った</mtext>
         </mrow>
       </mtd>
     </mtr>
@@ -967,7 +967,7 @@ lkjh
       </mtd>
       <mtd>
         <mrow>
-          <mtext>�J�b�R���O���ēW�J����</mtext>
+          <mtext>カッコを外して展開した</mtext>
         </mrow>
       </mtd>
     </mtr>
@@ -1017,7 +1017,7 @@ lkjh
           <mover><mi>OH</mi><mo>&rarr;</mo></mover>
           <mtext>
             &thinsp;
-            ��
+            と
           </mtext>
           <mfenced>
             <mtable>
@@ -1027,7 +1027,7 @@ lkjh
           </mfenced>
           <mtext>
             &thinsp;
-            �͐����Ȃ̂œ��ς�
+            は垂直なので内積は
             &thinsp;
           </mtext>
           <mn>0</mn>
@@ -1092,7 +1092,7 @@ lkjh
           </mfenced>
           <mtext>
             &thinsp;
-            ������
+            だから
           </mtext>
         </mrow>
       </mtd>
@@ -1140,7 +1140,7 @@ lkjh
       </mtd>
       <mtd>
         <mrow>
-          <mtext>���ς𐬕��Ōv�Z����</mtext>
+          <mtext>内積を成分で計算した</mtext>
         </mrow>
       </mtd>
     </mtr>
@@ -1181,7 +1181,7 @@ lkjh
       </mtd>
       <mtd>
         <mrow>
-          <mtext>��������</mtext>
+          <mtext>整理した</mtext>
         </mrow>
       </mtd>
     </mtr>
@@ -1222,7 +1222,7 @@ lkjh
       </mtd>
       <mtd>
         <mrow>
-          <mtext>���ӂ���������</mtext>
+          <mtext>両辺を交換した</mtext>
         </mrow>
       </mtd>
     </mtr>
@@ -1231,7 +1231,7 @@ lkjh
 </p>
 
 <p>
-������ <code>mlabeledtr</code> ��
+式説明 <code>mlabeledtr</code> で
 </p>
 mnbv
 <p style="margin-left: 2em;">
@@ -1240,7 +1240,7 @@ mnbv
     <mlabeledtr>
       <mtd>
         <mrow>
-          <mtext>���ς������</mtext>
+          <mtext>内積を取った</mtext>
         </mrow>
       </mtd>
       <mtd>
@@ -1294,7 +1294,7 @@ mnbv
     <mlabeledtr>
       <mtd>
         <mrow>
-          <mtext>�J�b�R���O���ēW�J����</mtext>
+          <mtext>カッコを外して展開した</mtext>
         </mrow>
       </mtd>
       <mtd>
@@ -1354,7 +1354,7 @@ mnbv
           <mover><mi>OH</mi><mo>&rarr;</mo></mover>
           <mtext>
             &thinsp;
-            ��
+            と
           </mtext>
             <mtable>
               <mtr><mtd><mi>a</mi></mtd></mtr>
@@ -1591,16 +1591,16 @@ mnbv
 </math>
 </p>
 <ul>
-  <li>���x���Z���̒��� 2�s�̃e�[�u���Ɋ��ʂ����悤�Ƃ���ƃG���[</li>
-  <li>���x���Z���Ƀ��x���ȏ�̒����̐����͓K���Ȃ�����</li>
-  <li>�����ăe�[�u���{�̂͒����Ɋ��</li>
+  <li>ラベルセルの中で 2行のテーブルに括弧をつけようとするとエラー</li>
+  <li>ラベルセルにラベル以上の長さの説明は適さない感じ</li>
+  <li>そしてテーブル本体は中央に寄る</li>
 </ul>
 <p>
-�Ƃ����킯�ŁA <code>mlabeledtr</code>  �͂�����Ǝg���ɂ�������
+というわけで、 <code>mlabeledtr</code>  はちょっと使いにくいかな
 </p>
 
 <p>
-�����ĉ��������l����
+そして横引きを考える
 </p>
 tyg
 <p style="margin-left: 2em;">
@@ -1608,15 +1608,15 @@ tyg
   <mtable>
     <mtr>
       <mtd>
-        <mtext>�c�c</mtext>
+        <mtext>……</mtext>
       </mtd>
       <mtd>
-        <mtext>�O�_���[�_</mtext>
+        <mtext>三点リーダ</mtext>
       </mtd>
     </mtr>
     <mtr>
       <mtd rowalign="center">
-        <mtext>�c�c</mtext>
+        <mtext>……</mtext>
       </mtd>
       <mtd>
         <mtext>rowalign center</mtext>
@@ -1658,13 +1658,13 @@ tyg
 </math>
 </p>
 <ul>
-  <li><code>rowalign</code> �͌����Ȃ��A�Ƃ������ςȊ���</li>
-  <li>����Ȃ璆���ɂ���̂� midline horizontal ellipsis &amp;#x22EF; </li>
-  <li>������ɂ��Ă��_�̔z�u�̓���</li>
+  <li><code>rowalign</code> は効かない、というか変な感じ</li>
+  <li>それなら中程にくるのは midline horizontal ellipsis &amp;#x22EF; </li>
+  <li>いずれにしても点の配置はムラ</li>
     <ul>
-      <li><code>thinsp</code> ���ނƂȂ�Ƃ�</li>
+      <li><code>thinsp</code> 挟むとなんとか</li>
     </ul>
-  <li>���Ȃ�ړI�O�g�p������ <code>mfrac</code> ��</li>
+  <li>線なら目的外使用だけど <code>mfrac</code> か</li>
 </ul>
 
 </body>
