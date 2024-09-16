@@ -40,7 +40,10 @@ error BC30002: 型 'Point' が定義されていません。
 ```
 最後に UTC の/月/日 時、と、PDTの /月/日 時 を
 ```
-
+そんでコンパイル手順
+```cmd
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc /target:winexe /r:System.Windows.Forms.dll /r:System.Drawing.dll dateVB.vb
+```
 
 
 ## JScript
