@@ -14,7 +14,7 @@ Public Class MyForm
     Public Sub New()
         ' フォームのサイズ設定
         Me.Text = "現在日時"
-        Me.Size = New Size(400, 300)
+        Me.Size = New Size(400, 240)
 
         ' 年/月と曜日用のラベルを作成し、フォントサイズを通常に設定
         LabelYearMonthDayOfWeek = New Label()
@@ -26,30 +26,32 @@ Public Class MyForm
         ' 日付用のラベルを作成し、フォントサイズを大きく設定
         LabelDay = New Label()
         LabelDay.AutoSize = True
-        LabelDay.Location = New Point(20, 20)
+        LabelDay.Location = New Point(00, 20)
         LabelDay.Font = New Font("Arial", 80, FontStyle.Regular) ' 大きなフォント
-        Me.Controls.Add(LabelDay)
+        'Me.Controls.Add(LabelDay) '日付は一番後ろに配置して時間表示を覆い隠さないように
 
         ' 時間用のラベルを作成
         LabelTime = New Label()
         LabelTime.AutoSize = True
-        LabelTime.Location = New Point(20, 160)
+        LabelTime.Location = New Point(20, 130)
         LabelTime.Font = New Font("Arial", 12, FontStyle.Regular) ' 通常サイズのフォント
         Me.Controls.Add(LabelTime)
 
         ' UTC時間用のラベルを作成
         LabelUtcTime = New Label()
         LabelUtcTime.AutoSize = True
-        LabelUtcTime.Location = New Point(20, 180)
+        LabelUtcTime.Location = New Point(20, 150)
         LabelUtcTime.Font = New Font("Arial", 12, FontStyle.Regular)
         Me.Controls.Add(LabelUtcTime)
 
         ' PDT時間用のラベルを作成
         LabelPdtTime = New Label()
         LabelPdtTime.AutoSize = True
-        LabelPdtTime.Location = New Point(20, 200)
+        LabelPdtTime.Location = New Point(20, 170)
         LabelPdtTime.Font = New Font("Arial", 12, FontStyle.Regular)
         Me.Controls.Add(LabelPdtTime)
+        
+	Me.Controls.Add(LabelDay) '日付は一番後ろに配置して時間表示を覆い隠さないように
 
         ' タイマーの設定
         Timer1 = New Timer()
