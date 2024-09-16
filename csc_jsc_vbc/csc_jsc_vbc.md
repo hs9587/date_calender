@@ -11,3 +11,11 @@ Visual C# Compiler (C#5まで)、JScript コンパイラ、Visual Basic コン�
 
 ので、ちょっとその辺で date_calender をやってみます。  
 2024/9/15(日)
+
+## VB Visual Basic
+
+
+
+## JScript
+
+## C# (up to C# 5)
