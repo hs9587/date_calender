@@ -19,35 +19,35 @@ Public Class MyForm
         ' 年/月と曜日用のラベルを作成し、フォントサイズを通常に設定
         LabelYearMonthDayOfWeek = New Label()
         LabelYearMonthDayOfWeek.AutoSize = True
-        LabelYearMonthDayOfWeek.Location = New Point(20, 20)
-        LabelYearMonthDayOfWeek.Font = New Font("Arial", 14, FontStyle.Regular) ' 通常サイズのフォント
+        LabelYearMonthDayOfWeek.Location = New Point(20, 10)
+        LabelYearMonthDayOfWeek.Font = New Font("Arial", 12, FontStyle.Regular) ' 通常サイズのフォント
         Me.Controls.Add(LabelYearMonthDayOfWeek)
 
         ' 日付用のラベルを作成し、フォントサイズを大きく設定
         LabelDay = New Label()
         LabelDay.AutoSize = True
-        LabelDay.Location = New Point(20, 60)
-        LabelDay.Font = New Font("Arial", 36, FontStyle.Bold) ' 大きなフォント
+        LabelDay.Location = New Point(20, 20)
+        LabelDay.Font = New Font("Arial", 80, FontStyle.Regular) ' 大きなフォント
         Me.Controls.Add(LabelDay)
 
         ' 時間用のラベルを作成
         LabelTime = New Label()
         LabelTime.AutoSize = True
-        LabelTime.Location = New Point(20, 130)
-        LabelTime.Font = New Font("Arial", 14, FontStyle.Regular) ' 通常サイズのフォント
+        LabelTime.Location = New Point(20, 160)
+        LabelTime.Font = New Font("Arial", 12, FontStyle.Regular) ' 通常サイズのフォント
         Me.Controls.Add(LabelTime)
 
         ' UTC時間用のラベルを作成
         LabelUtcTime = New Label()
         LabelUtcTime.AutoSize = True
-        LabelUtcTime.Location = New Point(20, 160)
+        LabelUtcTime.Location = New Point(20, 180)
         LabelUtcTime.Font = New Font("Arial", 12, FontStyle.Regular)
         Me.Controls.Add(LabelUtcTime)
 
         ' PDT時間用のラベルを作成
         LabelPdtTime = New Label()
         LabelPdtTime.AutoSize = True
-        LabelPdtTime.Location = New Point(20, 190)
+        LabelPdtTime.Location = New Point(20, 200)
         LabelPdtTime.Font = New Font("Arial", 12, FontStyle.Regular)
         Me.Controls.Add(LabelPdtTime)
 
@@ -60,7 +60,7 @@ Public Class MyForm
     ' タイマーのTickイベントで日時を更新
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ' 年/月と曜日を通常サイズで表示
-        Dim yearMonth As String = DateTime.Now.ToString("yyyy/MM")
+        Dim yearMonth As String = DateTime.Now.ToString("yyyy/M/")
         Dim dayOfWeek As String = GetJapaneseDayOfWeek(DateTime.Now.DayOfWeek)
         LabelYearMonthDayOfWeek.Text = yearMonth & " (" & dayOfWeek & ")"
 
@@ -74,12 +74,12 @@ Public Class MyForm
 
         ' UTCの時間を表示
         Dim utcNow As DateTime = DateTime.UtcNow
-        LabelUtcTime.Text = "UTC: " & utcNow.ToString("MM/dd HH:mm")
+        LabelUtcTime.Text = "UTC" & utcNow.ToString("/MM/dd HH")
 
         ' PDTの時間を表示
         Dim pdtZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time")
         Dim pdtNow As DateTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, pdtZone)
-        LabelPdtTime.Text = "PDT: " & pdtNow.ToString("MM/dd HH:mm")
+        LabelPdtTime.Text = "PDT" & pdtNow.ToString("/MM/dd HH")
     End Sub
 
     ' 日本語の曜日を取得する関数
