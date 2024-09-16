@@ -9,5 +9,5 @@ c:\Windows\Microsoft.NET\Framework64\v4.0.30319\
 Visual C# Compiler (C#5まで)、JScript コンパイラ、Visual Basic コンパイラ
 です。64 のついてないところには 32bit版のコンパイラもある。
 
-ので、ちょっとその辺で date_calender をやってみます。 
+ので、ちょっとその辺で date_calender をやってみます。  
 2024/9/15(日)
