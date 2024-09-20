@@ -25,7 +25,7 @@ Public Class MyForm
         ' 日付用のラベルを作成し、フォントサイズを大きく設定
         LabelDay = New Label()
         LabelDay.AutoSize = True
-        LabelDay.Font = New Font("Arial", 80, FontStyle.Regular) ' 大きなフォント
+        LabelDay.Font = New Font("Arial", 72, FontStyle.Regular) ' 大きなフォント
         'Me.Controls.Add(LabelDay) '日付は一番後ろに配置して時間表示を覆い隠さないように
 
         ' 時間用のラベルを作成
