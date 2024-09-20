@@ -14,7 +14,7 @@ Public Class MyForm
     Public Sub New()
         ' フォームのサイズ設定
         Me.Text = "現在日時"
-        Me.Size = New Size(400, 240)
+        Me.Size = New Size(170, 235)
 
         ' 年/月と曜日用のラベルを作成し、フォントサイズを通常に設定
         LabelYearMonthDayOfWeek = New Label()
@@ -57,6 +57,9 @@ Public Class MyForm
         Timer1 = New Timer()
         Timer1.Interval = 1000 ' 1秒ごとに更新
         Timer1.Start()
+
+        ' 初期位置でセンタリング
+        CenterLabels()
     End Sub
 
     ' タイマーのTickイベントで日時を更新
@@ -82,6 +85,9 @@ Public Class MyForm
         Dim pdtZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time")
         Dim pdtNow As DateTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, pdtZone)
         LabelPdtTime.Text = "PDT" & pdtNow.ToString("/MM/dd HH")
+
+        ' ラベルを再度センタリング
+        CenterLabels()
     End Sub
 
     ' 日本語の曜日を取得する関数
@@ -105,6 +111,23 @@ Public Class MyForm
                 Return ""
         End Select
     End Function
+
+    ' ラベルをセンタリングする関数
+    Private Sub CenterLabels()
+        ' フォームの中央にラベルを配置するため、幅を基準にして Left を調整
+        LabelYearMonthDayOfWeek.Left = (Me.ClientSize.Width - LabelYearMonthDayOfWeek.Width) / 2
+        LabelDay.Left = (Me.ClientSize.Width - LabelDay.Width) / 2
+        LabelTime.Left = (Me.ClientSize.Width - LabelTime.Width) / 2
+        LabelUtcTime.Left = (Me.ClientSize.Width - LabelUtcTime.Width) / 2
+        LabelPdtTime.Left = (Me.ClientSize.Width - LabelPdtTime.Width) / 2
+
+        ' 垂直方向の位置を設定
+        LabelYearMonthDayOfWeek.Top = 10
+        LabelDay.Top = 20
+        LabelTime.Top = 130
+        LabelUtcTime.Top = 150
+        LabelPdtTime.Top = 170
+    End Sub
 End Class
 
 ' アプリケーションのエントリーポイント
