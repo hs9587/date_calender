@@ -12,12 +12,19 @@ Public Class MyForm
     Private WithEvents Timer1 As Timer
 
     Public Sub New()
-        ' フォームのサイズ設定
+        ' フォームのサイズ等設定
         Me.Text = "現在日時"
         Me.Size = New Size(150, 200)
 	Me.MaximizeBox = False
 	Me.MinimizeBox = False
 	Me.Icon = New Icon("date.ico")
+
+	' フォームの位置は右上の墨
+        Dim screenWidth As Integer = Screen.PrimaryScreen.WorkingArea.Width
+        Dim formWidth As Integer = Me.Width
+        Dim formX As Integer = screenWidth - formWidth
+	Me.StartPosition = FormStartPosition.Manual ' Window位置を手動設定に
+        Me.Location = New Point(formX + 15, -33) ' 右と上にちょっとめり込む 
 
         ' 年/月と曜日用のラベルを作成し、フォントサイズを通常に設定
         LabelYearMonthDayOfWeek = New Label()
