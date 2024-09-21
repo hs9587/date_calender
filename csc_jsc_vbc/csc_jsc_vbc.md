@@ -44,6 +44,10 @@ error BC30002: 型 'Point' が定義されていません。
 ```cmd
 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc /target:winexe /r:System.Windows.Forms.dll /r:System.Drawing.dll dateVB.vb
 ```
+そのソースをさらに調整、ChatGP の助けも得て表表示詳細やセンタリングとか夏時間のこととか、Windowのサイズもギリギリにして、最大化最小化釦もなくしアイコンも。
+左肩のアイコン用の画像も ChatGPT に作ってもらって(webp)からトリミングとファイル形式変更して .icoファイルにした。
+そして Window位置調整もする、引数から読むのは .hta版を範とした。
+
 
 
 ## JScript
