@@ -77,9 +77,6 @@ Public Class MyForm
         LabelUtcTime.Text = "UTC" & utcNow.ToString("/MM/dd HH")
 
         ' PDT/PSTの時間を表示
-        'Dim pdtZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time")
-        'Dim pdtNow As DateTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, pdtZone)
-        'LabelPdtTime.Text = "PDT" & pdtNow.ToString("/MM/dd HH")
         Dim pdtPstZone As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Pacific Standard Time")
         Dim pdtPstNow As DateTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, pdtPstZone)
         Dim isDaylightSaving As Boolean = pdtPstZone.IsDaylightSavingTime(pdtPstNow)
