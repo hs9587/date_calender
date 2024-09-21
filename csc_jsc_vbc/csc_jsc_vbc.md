@@ -44,9 +44,15 @@ error BC30002: 型 'Point' が定義されていません。
 ```cmd
 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc /target:winexe /r:System.Windows.Forms.dll /r:System.Drawing.dll dateVB.vb
 ```
-そのソースを調整、ChatGP の助けも借りながら、表示詳細やセンタリングとか夏時間のこと、Windowのサイズもギリギリにして、最大化最小化釦もなくしアイコンも。  
-左肩のアイコン用の画像も ChatGPT に作ってもらって(webp)からトリミングとファイル形式変更して .icoファイルにした。
-そして Window位置調整もする、引数から読むのは .hta版を範とする。
+そのソースを調整、ChatGP の助けも借りながら、表示詳細やセンタリングとか夏時間のこと、Windowのサイズもギリギリにして、最大化最小化釦もなくしアイコンも。
+
+左肩のアイコン用の画像も ChatGPT に作ってもらって(webp)からトリミングとファイル形式変更して .icoファイルにした。ChatGPT からの画像は背景グレーだったのは、Windows付属の フォト で背景を削除したらなんとかなった、いいように背景を自動識別してくれた。  
+そしてそのアイコンを .exe 自体にも適用するのは vbcコンパイラのオプション /win32icon でした。
+```cmd
+date_calender\csc_jsc_vbc>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc /target:winexe /r:System.Windows.Forms.dll /r:System.Drawing.dll /win32icon:date.ico dateVB.vb
+```
+
+さらに、Windowの位置調整もする、引数から読むのは .hta版を範とする。躯体的なコードは ChatGPTの助け。
 
 
 
