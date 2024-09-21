@@ -15,6 +15,9 @@ Public Class MyForm
         ' フォームのサイズ設定
         Me.Text = "現在日時"
         Me.Size = New Size(150, 200)
+	Me.MaximizeBox = False
+	Me.MinimizeBox = False
+	Me.Icon = New Icon("date.ico")
 
         ' 年/月と曜日用のラベルを作成し、フォントサイズを通常に設定
         LabelYearMonthDayOfWeek = New Label()
