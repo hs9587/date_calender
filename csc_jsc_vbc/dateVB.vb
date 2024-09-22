@@ -11,7 +11,7 @@ Public Class MyForm
     Private LabelPdtPstTime As Label ' PDT/PSTの時間を表示
     Private WithEvents Timer1 As Timer
 
-    Public Sub New()
+    Public Sub New(xOffset As Integer, yOffset As Integer)
         ' フォームのサイズ等設定
         Me.Text = "現在日時"
         Me.Size = New Size(150, 200)
@@ -24,7 +24,8 @@ Public Class MyForm
         Dim formWidth As Integer = Me.Width
         Dim formX As Integer = screenWidth - formWidth
 	Me.StartPosition = FormStartPosition.Manual ' Window位置を手動設定に
-        Me.Location = New Point(formX + 15, -33) ' 右と上にちょっとめり込む 
+        Me.Location = New Point(formX - xOffset, yOffset)
+	' 右上隅から、xが増えると左に、yがふえると下に、進む
 
         ' 年/月と曜日用のラベルを作成し、フォントサイズを通常に設定
         LabelYearMonthDayOfWeek = New Label()
@@ -141,7 +142,16 @@ End Class
 
 ' アプリケーションのエントリーポイント
 Public Module MyApp
-    Sub Main()
-        Application.Run(New MyForm())
-    End Sub
+    Sub Main(args As String())
+        ' デフォルトのオフセット値、Window位置右上隅からどれだけ戻るか
+        Dim xOffset As Integer = -15 
+        Dim yOffset As Integer = -33 ' 右上にちょっとめり込む
+
+        ' 引数がある場合、それをオフセットとして使用
+        If args.Length > 0 Then Integer.TryParse(args(0), xOffset)
+        If args.Length > 1 Then Integer.TryParse(args(1), yOffset)
+
+        ' フォームを引数に基づいた位置で作成
+        Application.Run(New MyForm(xOffset, yOffset))
+    End Sub    
 End Module
