@@ -144,12 +144,19 @@ End Class
 Public Module MyApp
     Sub Main(args As String())
         ' デフォルトのオフセット値、Window位置右上隅からどれだけ戻るか
-        Dim xOffset As Integer = -15 
-        Dim yOffset As Integer = -33 ' 右上にちょっとめり込む
+        Dim xOffset As Integer = 0
+        Dim yOffset As Integer = 0
 
         ' 引数がある場合、それをオフセットとして使用
         If args.Length > 0 Then Integer.TryParse(args(0), xOffset)
         If args.Length > 1 Then Integer.TryParse(args(1), yOffset)
+
+	' 引数が Default とか default とかだったら、右上にちょっとめり込む
+	If args.Length > 0 AndAlso args(0).Length >0 AndAlso
+	  (args(0)(0) = "D"c OrElse args(0)(0) = "d"c) Then
+	  xOffset = -15
+	  yOffset = -33
+	End If
 
         ' フォームを引数に基づいた位置で作成
         Application.Run(New MyForm(xOffset, yOffset))
