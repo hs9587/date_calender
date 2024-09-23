@@ -52,7 +52,7 @@ c:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc /target:winexe /r:System.Win
 date_calender\csc_jsc_vbc>c:\Windows\Microsoft.NET\Framework64\v4.0.30319\vbc /target:winexe /r:System.Windows.Forms.dll /r:System.Drawing.dll /win32icon:date.ico dateVB.vb
 ```
 
-さらに、Windowの位置調整もする、引数から読むのは .hta版を範とする。躯体的なコードは ChatGPTの助け。
+さらに、Windowの位置調整もする、引数から読むのは .hta版を範とする。具体的なコードは ChatGPTの助け。
 
 
 
