@@ -78,7 +78,7 @@ Public Class MyForm
         LabelYearMonthDayOfWeek.Text = yearMonth & " (" & dayOfWeek & ")"
 
         ' 日付部分を大きく表示
-        Dim day As String = DateTime.Now.ToString("dd")
+        Dim day As String = DateTime.Now.ToString("%d")
         LabelDay.Text = day
 
         ' 現在の時間を通常サイズで表示
